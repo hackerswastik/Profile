@@ -60,58 +60,6 @@ export default function Projects() {
           ))}
         </Slider>
       </div>
-    </div>
-  );
-}
-          {data.map((project) => (
-            <div key={project.id} className="px-2">
-              <div className="netflix-card">
-                <img
-                  src={project.image || '/assets/project-placeholder.jpg'}
-                  alt={project.title}
-                  className="w-full aspect-video object-cover rounded-md"
-                />
-                <div className="netflix-card-overlay p-4 flex flex-col justify-end">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-sm text-gray-300 mb-4">{project.blurb}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-2 py-1 bg-white/20 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="netflix-button text-sm"
-                      >
-                        View Demo
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded transition-colors"
-                      >
-                        View Code
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </section>
 
       {active && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">

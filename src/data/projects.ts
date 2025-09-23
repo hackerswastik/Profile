@@ -53,8 +53,7 @@ export const projects: Project[] = [
     title: 'Real-time Notifications',
     blurb: 'WebSocket service with fallbacks and exponential backoff.',
     tech: ['WebSocket', 'Spring', 'Redis'],
-    image: '/assets/project6.svg',
-    image: '/assets/project6.svg',
+    image: '/assets/project6.svg'
   },
 ];
 

@@ -41,7 +41,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(/assets/profile.jpg)`,
+          backgroundImage: `url(/assets/banner-1.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.6)',

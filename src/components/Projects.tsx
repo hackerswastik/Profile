@@ -10,23 +10,29 @@ export default function Projects() {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    cssEase: "ease-in-out",
+    arrows: true,
+    className: "netflix-slider",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         }
       },
       {
@@ -40,13 +46,23 @@ export default function Projects() {
   };
 
   return (
-    <div>
-      <h2 className="section-title">Projects</h2>
-      <p className="mt-2 text-slate-600 dark:text-slate-300">
-        Selected work across back-end services and front-end apps.
-      </p>
-      <section className="netflix-section">
+    <div className="py-16 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-2">Featured Projects</h2>
+        <p className="text-xl text-gray-400 mb-8">
+          Explore my latest work and technical achievements
+        </p>
+      </div>
+      <div className="netflix-section relative -mx-4">
         <Slider {...settings}>
+          {data.map((project) => (
+            <ProjectCard key={project.id} project={project} onOpen={() => setActive(project)} />
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
+}
           {data.map((project) => (
             <div key={project.id} className="px-2">
               <div className="netflix-card">

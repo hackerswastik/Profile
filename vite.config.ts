@@ -15,6 +15,18 @@ export default defineConfig(({ mode }) => {
     define: {
       'process.env': env,
     },
+    build: {
+      outDir: 'dist',
+      sourcemap: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+            'ui-vendor': ['framer-motion', 'lucide-react']
+          }
+        }
+      }
+    },
     server: {
       port: 5173,
       open: true,

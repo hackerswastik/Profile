@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import ContactForm from './components/ContactForm';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import { useAnalytics } from './lib/useAnalytics';
 
@@ -25,6 +26,7 @@ export default function App() {
           <About />
           <Projects />
           <Skills />
+          <Testimonials />
           <ContactForm />
         </div>
       </main>

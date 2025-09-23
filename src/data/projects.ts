@@ -11,7 +11,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 'proj1',
-    title: 'Data Processing Pipeline',
+    title: 'Enterprise Data Pipeline',
     blurb: 'Large-scale data processing system handling millions of records using Apache Spark and Databricks, with automated data quality checks and monitoring.',
     tech: ['Scala', 'Apache Spark', 'Databricks', 'Python', 'Airflow'],
     github: 'https://github.com/hackerswastik/data-pipeline',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     id: 'proj3',
-    title: 'Microservices Architecture',
+    title: 'Enterprise Microservices',
     blurb: 'Developed a suite of microservices for a high-traffic financial system using Spring Boot and Spring Cloud, with circuit breakers and distributed tracing.',
     tech: ['Java', 'Spring Boot', 'Spring Cloud', 'PostgreSQL', 'Docker'],
     github: 'https://github.com/hackerswastik/microservices',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     id: 'proj4',
-    title: 'Real-time Analytics Platform',
+    title: 'Real-time Analytics',
     blurb: 'Built a real-time analytics system processing streaming data using Kafka and Spark Streaming, with automated scaling and fault tolerance.',
     tech: ['Scala', 'Apache Kafka', 'Spark Streaming', 'Redis', 'Kubernetes'],
     github: 'https://github.com/hackerswastik/real-time-analytics',
@@ -43,14 +43,14 @@ export const projects: Project[] = [
   },
   {
     id: 'proj5',
-    title: 'CI/CD Automation',
+    title: 'DevOps Automation',
     blurb: 'Implemented enterprise-grade CI/CD pipelines with automated testing, deployment, and rollback capabilities using Jenkins and AWS.',
     tech: ['Jenkins', 'AWS', 'Docker', 'Kubernetes', 'Terraform'],
     image: '/assets/cicd-jenkins-aws.svg'
   },
   {
     id: 'proj6',
-    title: 'Real-time Notifications',
+    title: 'Real-time Messaging',
     blurb: 'WebSocket service with fallbacks and exponential backoff.',
     tech: ['WebSocket', 'Spring', 'Redis'],
     image: '/assets/websocket-notifications.svg'

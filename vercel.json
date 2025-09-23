@@ -10,7 +10,10 @@
         "installCommand": "npm install"
       }
     },
-    { "src": "api/*.ts", "use": "@vercel/node" }
+    {
+      "src": "api/*.ts",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
     {
@@ -23,6 +26,7 @@
       "src": "^/(.*)\\.(js|css|svg|png|jpg|jpeg|gif|ico|json|webmanifest)$",
       "dest": "/$1.$2"
     },
+    { "handle": "filesystem" },
     { "src": "^/(.*)", "dest": "/index.html" }
   ]
 }

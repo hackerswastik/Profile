@@ -21,8 +21,14 @@ export default function Navbar() {
   const handleNav = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 72; // offset
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      const headerOffset = 72;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
       setOpen(false);
     }
   };

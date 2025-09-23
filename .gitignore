@@ -1,8 +1,4 @@
-node_modules
-dist
-.DS_Store
+node_modules/
+dist/
 .env
-.env.*.local
-vite.svg
-
-.vercel
+*.log

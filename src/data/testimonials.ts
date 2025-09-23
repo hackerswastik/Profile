@@ -27,7 +27,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     platform: '100% Job Success',
-    image: '/assets/100%jobsuccess.png',
+    image: '/assets/100jobsuccess.png',
     quote: 'Maintained perfect job success score through consistent high-quality deliveries.',
     rating: 5
   },

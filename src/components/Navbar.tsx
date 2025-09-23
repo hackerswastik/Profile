@@ -21,9 +21,12 @@ export default function Navbar() {
   const handleNav = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const headerOffset = 72;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const navbar = document.querySelector('nav');
+      const headerOffset = navbar ? navbar.offsetHeight : 72;
+      
+      const elementRect = el.getBoundingClientRect();
+      const absoluteElementTop = elementRect.top + window.pageYOffset;
+      const offsetPosition = absoluteElementTop - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,

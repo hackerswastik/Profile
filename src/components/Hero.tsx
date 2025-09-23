@@ -32,10 +32,15 @@ export default function Hero() {
   const onContact = () => {
     const el = document.getElementById('contact');
     if (!el) return;
-    const headerOffset = 72;
-    const elementPosition = el.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     
+    const navbar = document.querySelector('nav');
+    const headerOffset = navbar ? navbar.offsetHeight : 72;
+    
+    const elementRect = el.getBoundingClientRect();
+    const absoluteElementTop = elementRect.top + window.pageYOffset;
+    const middle = elementRect.height / 2;
+    const offsetPosition = absoluteElementTop - headerOffset;
+
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'

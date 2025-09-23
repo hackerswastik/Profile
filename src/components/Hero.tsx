@@ -3,9 +3,9 @@ import { siteConfig } from '@/data/site.config';
 import { ArrowRight, FileText, Mail } from 'lucide-react';
 
 const variants = {
-  container: { staggerChildren: 0.1 },
-  item: { opacity: 0, y: 16, transition: { type: 'spring', stiffness: 120 } },
-  itemVisible: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 }
 };
 
 export default function Hero() {
@@ -30,20 +30,45 @@ export default function Hero() {
         }}
       />
       <div className="relative z-10 max-w-4xl">
-        <motion.p className="text-sm text-slate-500 dark:text-slate-300 mb-2" variants={variants}>
+        <motion.p 
+          className="text-sm text-slate-500 dark:text-slate-300 mb-2"
+          initial={prefersReducedMotion ? {} : variants.initial}
+          animate={prefersReducedMotion ? {} : variants.animate}
+          transition={variants.transition}
+        >
           {siteConfig.location}
         </motion.p>
-        <motion.h1 className="text-6xl font-bold mb-4 text-white" variants={variants}>
+        <motion.h1 
+          className="text-6xl font-bold mb-4 text-white"
+          initial={prefersReducedMotion ? {} : variants.initial}
+          animate={prefersReducedMotion ? {} : variants.animate}
+          transition={{ ...variants.transition, delay: 0.1 }}
+        >
           {siteConfig.name}
         </motion.h1>
-        <motion.p className="text-2xl font-medium text-gray-200 mb-8" variants={variants}>
+        <motion.p 
+          className="text-2xl font-medium text-gray-200 mb-8"
+          initial={prefersReducedMotion ? {} : variants.initial}
+          animate={prefersReducedMotion ? {} : variants.animate}
+          transition={{ ...variants.transition, delay: 0.2 }}
+        >
           {siteConfig.title}
         </motion.p>
-        <motion.p className="mt-6 text-base text-slate-600 dark:text-slate-300" variants={variants}>
+        <motion.p 
+          className="mt-6 text-base text-slate-600 dark:text-slate-300"
+          initial={prefersReducedMotion ? {} : variants.initial}
+          animate={prefersReducedMotion ? {} : variants.animate}
+          transition={{ ...variants.transition, delay: 0.3 }}
+        >
           {siteConfig.hero.subheadline}
         </motion.p>
 
-        <motion.div className="mt-8 flex flex-wrap justify-center gap-3" variants={variants}>
+        <motion.div 
+          className="mt-8 flex flex-wrap justify-center gap-3"
+          initial={prefersReducedMotion ? {} : variants.initial}
+          animate={prefersReducedMotion ? {} : variants.animate}
+          transition={{ ...variants.transition, delay: 0.4 }}
+        >
           <a
             className="netflix-button flex items-center gap-2"
             href="#contact"

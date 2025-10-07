@@ -9,8 +9,8 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     platform: 'Upwork',
-    image: '/assets/Upworkreview.png',
-    quote: 'Exceptional work with our data pipeline project. Deep expertise in Spark and data engineering.',
+    image: '/assets/projectReview.png',
+    quote: 'Delivered complex enterprise project with excellence. Great attention to detail and technical expertise.',
     rating: 5
   },
   {
@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     rating: 5
   },
   {
-    platform: '100% Job Success',
+    platform: 'Upwork',
     image: '/assets/100jobsuccess.png',
     quote: 'Maintained perfect job success score through consistent high-quality deliveries.',
     rating: 5
@@ -38,15 +38,15 @@ export const testimonials: Testimonial[] = [
     rating: 5
   },
   {
-    platform: 'Client Satisfaction',
+    platform: 'Upwork',
     image: '/assets/topmate1.png',
     quote: 'Top-notch consulting session on data engineering and cloud architecture.',
     rating: 5
   },
   {
-    platform: 'Project Success',
-    image: '/assets/projectReview.png',
-    quote: 'Delivered complex enterprise project with excellence. Great attention to detail and technical expertise.',
+    platform: 'Upwork',
+    image: '/assets/Upworkreview.png',
+    quote: 'Exceptional work with our data pipeline project. Deep expertise in Spark and data engineering.',
     rating: 5
   }
 ];

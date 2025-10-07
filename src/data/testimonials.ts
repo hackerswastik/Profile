@@ -42,6 +42,12 @@ export const testimonials: Testimonial[] = [
     image: '/assets/topmate1.png',
     quote: 'Top-notch consulting session on data engineering and cloud architecture.',
     rating: 5
+  },
+  {
+    platform: 'Project Success',
+    image: '/assets/projectReview.png',
+    quote: 'Delivered complex enterprise project with excellence. Great attention to detail and technical expertise.',
+    rating: 5
   }
 ];
 
